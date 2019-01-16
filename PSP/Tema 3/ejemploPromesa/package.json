@@ -1,0 +1,15 @@
+{
+  "name": "ejemplopromesa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodejs app.js",
+    "debug": "node --inspect-brk app.js"
+  },
+  "author": "juanmaVela",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
