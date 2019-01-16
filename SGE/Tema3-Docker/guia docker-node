@@ -1,0 +1,15 @@
+From node
+
+ENV PORT 9000
+ENV MONGODB_URI url...
+
+WORKDIR...
+
+COPY....
+
+RUN npm install
+
+COPY . .
+
+EXPOSE ${PORT}
+CMD {"npm","run","dev"}

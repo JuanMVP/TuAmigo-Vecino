@@ -1,0 +1,15 @@
+{
+  "name": "mymongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodejs index.js",
+    "debug": "nodejs --inspect-brk index.js"
+  },
+  "author": "JuanmaVela",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.3.13"
+  }
+}

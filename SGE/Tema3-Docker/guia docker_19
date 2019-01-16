@@ -1,0 +1,7 @@
+PAsos para Dockerizar con node:
+
+1- Crear el docjerp dockerfile (dockerignore)
+
+2- Construir la imagen con docker build
+
+3- construir y ejecutar un contenedor a partir de una imagen con docker run

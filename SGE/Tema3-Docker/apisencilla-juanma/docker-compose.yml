@@ -1,0 +1,17 @@
+version: '1'
+services:
+  web:
+    build: .
+    ports:
+    - "8088:8080"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - node
+
+  node:
+    image: node:8
+
+volumes:
+  logvolume01: {}
