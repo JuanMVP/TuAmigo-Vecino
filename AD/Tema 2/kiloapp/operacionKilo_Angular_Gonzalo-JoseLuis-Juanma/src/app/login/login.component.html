@@ -1,0 +1,23 @@
+<div id="contenido">
+  <div id="login-container">
+    <h1>KiloAPP</h1>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Nombre usuario</mat-label>
+        <input matInput placeholder="Nombre usuario" required [(ngModel)]="username" name="username"
+        [ngStyle]="{'border':'#f7f9f9'}">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Contraseña</mat-label>
+        <input matInput placeholder="Combinación de números y letras" [(ngModel)]="password" name="password" required type="password"
+          >
+      </mat-form-field>
+      <br />
+      <button mat-raised-button [ngStyle]="{'background-color':'#d2cca1', 'color':'#12130f', 'width':'100%'}" 
+      (click)="doLogin()">Iniciar Sesión</button>
+      <br/><br/>
+      <button mat-raised-button [routerLink]="[ '/register' ]" [ngStyle]="{'background-color':'#f7f9f9', 'color':'#12130f', 'width':'100%'}" >Registrarse </button>
+    </form>
+  </div>
+  </div>

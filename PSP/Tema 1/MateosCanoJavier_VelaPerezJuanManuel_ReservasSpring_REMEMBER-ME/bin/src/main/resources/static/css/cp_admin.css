@@ -1,0 +1,148 @@
+.body{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc0000+26,cc4545+86 */
+  
+}
+
+.container {
+    margin-top: 2%;
+}
+
+.navbar {
+   background:#d81515;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+img{
+    margin: 3%;
+    width: 20%;
+    border: 1px solid white;
+}
+
+.centro{
+   color: white;
+   margin-top: 1%;
+   margin: 0 auto;
+   text-align: 
+}
+
+h2 {
+   text-align: center;
+}
+
+.glyphicon .glyphicon-log-in{
+   margin: 2%;
+   color: white;
+}
+
+.navbar-right {
+  margin-top: 1%;
+}
+
+.style {
+  color: white;
+  font-size: 16px;
+  padding: 4px;
+}
+
+/*-------- Contenido  ---------*/
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.col-12{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*------- Main, Productos y Paginación-------*/
+
+section .col-md-2 {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+
+}
+section .col-md-3 {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+
+section .col-md-4 {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+
+section .fas{
+  font-size:12vw;
+  background-color: white;
+  color: #d81515;
+
+}
+
+section .far{
+  font-size:12vw;
+  background-color: white;
+  color: #d81515;
+
+}
+
+section p {
+  color: grey;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+
+/*------ Footer -------*/
+h6 {
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #d81515;
+}
+
+
+.footer {
+  border-top: 2px solid #DE6262;
+  font-size: 16px;
+  background-color: white;
+  font-weight: bolder;
+}
+
+a {
+  color: #d81515;
+}
+
+footer .fab {
+  font-size: 24px;
+  background-color: white;
+  color: #d81515;
+}
+

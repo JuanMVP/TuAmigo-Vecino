@@ -1,0 +1,20 @@
+<div id="toolbar">
+  <mat-toolbar class="toolbar" color="primary">
+         <span>Bienvenidos a DamKeep!</span>
+         <span class="spacer"></span>
+   </mat-toolbar>
+   <div id="contenido">
+   <form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" required [(ngModel)]="email" name="email" [ngClass]="{'email-valido': validateEmail(), 'email-novalido': !validateEmail()}">
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput placeholder="Números o Números y Letras" [(ngModel)]="password" name="password" required type="password" [ngClass]="{'password-valido': validatePassword(), 'password-novalido': !validatePassword()}" >
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button color="primary" *ngIf="verifyLogin()" >Adelante!</button>
+  </form>
+</div>

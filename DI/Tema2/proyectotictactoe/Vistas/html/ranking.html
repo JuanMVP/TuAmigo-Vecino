@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIC TAC TOE</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+<body>
+    <nav class="nav-content">
+        <div class="nav-wrapper">
+            <img src="../img/tictactoe.png" id="logo" alt=""> <a href="index.html" class="brand-logo"> &nbsp;TicTacToe</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" id="btn-logout">Cerrar Sesión</a></li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Juego</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <h1>Ranking</h1>
+    <table class="highlight-striped" id="tabla-ranking">
+        <thead>
+            <tr>
+                <th id="ranking">Posición</th>
+                <th id="ranking">Nombre</th>
+                <th id="ranking">Puntos</th>
+                <th id="ranking">Tiempo Jugado</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="tabla-comentarios">
+        </tbody>
+    </table>
+
+    <script src="../javascript/ranking.js"></script>
+
+</body>
+
+</html>

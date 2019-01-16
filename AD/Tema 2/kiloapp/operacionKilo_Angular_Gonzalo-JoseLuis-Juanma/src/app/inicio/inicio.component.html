@@ -1,0 +1,24 @@
+<div id="container">
+
+  <nav>
+    <mat-toolbar [ngStyle]="{'background-color':'#4a5899'}">
+      <mat-toolbar-row>
+        <span [ngStyle]="{'color':'#f7f9f9'}">Campañas Salesianas</span>
+        <span class="example-spacer"></span>
+        <a href="" [routerLink]="[ '/campanias' ]">Campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/miscampanias' ]">Mis campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/ranking' ]">Ranking</a>&nbsp;&nbsp;&nbsp;
+        <mat-icon class="example-icon"><a href="" [routerLink]="[ '/login']">logout</a></mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+
+  <section>
+    <div id="Opciones">
+      <a href="" [routerLink]="[ '/campanias' ]"><img src="../../assets/img/campaña.svg"></a>
+      <a href="" [routerLink]="[ '/miscampanias' ]"><img id="central" src="../../assets/img/favorita.svg"></a>
+      <a href="" [routerLink]="[ '/ranking' ]"><img src="../../assets/img/ranking.svg"></a>
+    </div>
+  </section>
+
+</div>

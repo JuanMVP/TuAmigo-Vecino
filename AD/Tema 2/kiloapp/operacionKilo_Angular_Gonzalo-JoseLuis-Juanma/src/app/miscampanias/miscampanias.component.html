@@ -1,0 +1,52 @@
+<div id="container">
+  <nav>
+    <mat-toolbar [ngStyle]="{'background-color':'#4a5899'}">
+      <mat-toolbar-row>
+        <span [ngStyle]="{'color':'#f7f9f9'}">Campañas Salesianas</span>
+        <span class="example-spacer"></span>
+        <a href="" [routerLink]="[ '/campanias' ]">Campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/miscampanias' ]">Mis campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/ranking' ]">Ranking</a>&nbsp;&nbsp;&nbsp;
+        <mat-icon class="example-icon"><a href="" [routerLink]="[ '/login']">logout</a></mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+  <div fxFlex="100%" fxFlexFill>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" fxFlexFill>
+
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef id="cabecera"> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef id="cabecera"> Título </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef id="cabecera"> Descripción </th>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef id="cabecera"> Código </th>
+        <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef id="cabecera"> Acciones </th>
+        <td mat-cell *matCellDef="let element"><button mat-raised-button color="primary">Aportar</button></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

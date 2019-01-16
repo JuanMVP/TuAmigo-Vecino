@@ -1,0 +1,40 @@
+<div id="container" fxLayout="column" fFlexFill>
+  <nav>
+    <mat-toolbar [ngStyle]="{'background-color':'#4a5899'}">
+      <mat-toolbar-row>
+        <span [ngStyle]="{'color':'#f7f9f9'}">Administrador de Campañas</span>
+        <span class="example-spacer"></span>
+        <a href="" [routerLink]="[ '/addCampaing']">Añadir Campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="">Eliminar Campañas</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/addDataMaster']">Añadir Categoría</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/aportacion']">Aportaciones</a>&nbsp;&nbsp;&nbsp;
+        <a href="" [routerLink]="[ '/dataMasterList']">Lista Datos Maestros</a>&nbsp;&nbsp;&nbsp;
+        <mat-icon class="example-icon"><a href="" [routerLink]="[ '/login']">logout</a></mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+  <div id="register-container">
+    <h1>Rellene el formulario</h1>
+    <form class="example-form">
+
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Nombre de Campaña</mat-label>
+        <input matInput placeholder="Nombre Campaña" required [(ngModel)]="nombre" name="nombre">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Descripción</mat-label>
+        <input matInput placeholder="descripcion" required [(ngModel)]="descripcion" name="descripcion">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">codigo</mat-label>
+        <input matInput placeholder="Campaña" [(ngModel)]="codigo" name="codigo" required
+          type="text">
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" (click)="campaignCreate()" [ngStyle]="{'background-color':'#d2cca1', 'color':'#12130f', 'width':'100%'}">Añadir Aportación</button>
+    </form>
+</div>
+</div>
+

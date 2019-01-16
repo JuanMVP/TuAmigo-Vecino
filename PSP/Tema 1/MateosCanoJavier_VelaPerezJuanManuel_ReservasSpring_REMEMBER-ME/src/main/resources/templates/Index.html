@@ -1,0 +1,71 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+   <title>Inicio</title>
+   <meta charset="utf-8">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   <!------ Include the above in your HEAD tag ---------->
+
+</head>
+<body>  
+    <div class="container register">
+        <div class="row col-md-12">
+        <form class="login-form" th:action="@{/login}" method="post">
+            <div class="col-md-3 register-left">
+                <img src="img/salesianos.png" alt=""/>
+                <h2>Bienvenido</h2>
+                <h2>Iniciar Sesión</h2>
+                <p th:if="${loginError}" class="error">Error en el usuario o contraseña</p>
+                <p><label for="uname"><b>Usuario</b></label>
+                    <input type="text" id="username" name="username" autofocus="autofocus" required></p>
+                    <p><label for="psw"><b>Contraseña</b></label>
+                        <input type="password" id="password" name="password" required></p>
+                        <input type="submit" name="" value="Login"/><br/>
+                        
+                		<b>Remember Me:</b>
+               			 <input type="checkbox" name="remember-me" />
+            
+                    </div>
+             </form>
+                    <div class="col-md-7 register-right">
+                      <h3 class="register-heading" th:text="#{home.signup}">Registrate</h3>
+                      <form method="POST" name="registerform" th:action="@{/addUser}"
+						th:object="${RegistroUsuario}">
+                      <div class="row register-form">
+                        <div class="col-md-12 align">
+                            <div class="form-group">
+                                <label th:text="#{home.username}">Nombre</label>
+                                <input type="text" required th:field="*{username}"class="form-control" placeholder="First Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                               <label th:text="#{home.lastname}">Apellido</label>
+                                <input type="text" required th:field="*{lastname}" class="form-control" placeholder="Last Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{home.password}">Contraseña</label>
+                                <input type="password" required th:field="*{password}" class="form-control" placeholder="Password *" />
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{home.email}">Email</label>
+                                <input type="email" required th:field="*{email}" class="form-control" placeholder="Email *" />
+                            </div>
+                            <div class="align">
+                                 <input class="botonR" th:text="#{home.signup}" type="submit" value="Registrate" /><br/>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                </body>
+                </html>

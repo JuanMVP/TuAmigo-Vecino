@@ -1,0 +1,16 @@
+<div fxLayout="column" fFlexFill>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre" [(ngModel)]="nombreTipo" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Campaña" [(value)]="campania" required>
+      <mat-option [value]=0>Seleccione una campaña</mat-option>
+      <mat-option *ngFor="let c of campaigns" [value]="c.id">
+        {{campania.id}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="saveDataMaster()">Guardar dato</button>
+</div>

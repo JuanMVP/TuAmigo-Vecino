@@ -1,0 +1,153 @@
+body{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc0000+26,cc4545+86 */
+    background: #cc0000; /* Old browsers */
+    background: -moz-linear-gradient(top, #cc0000 26%, #cc4545 86%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cc0000 26%,#cc4545 86%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cc0000 26%,#cc4545 86%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc4545',GradientType=0 ); /* IE6-9 */
+}
+
+.container {
+    margin-top: 2%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+}
+
+.register-left b{
+    margin: 0 auto;
+    text-align: center;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    margin: 5%;
+    text-align: center;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    width: 70%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    border: 1px solid white;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 5%;
+    margin-top: -5%;
+}
+.register .register-form{
+    margin: 0 auto;
+    padding: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 80%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -5%;
+    color: #495057;
+}
+
+.botonR {
+    margin: 0 auto;
+    border-radius: 12%;
+    color: white;
+    background: #cc0000; /* Old browsers */
+    background: -moz-linear-gradient(top, #cc0000 26%, #cc4545 86%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cc0000 26%,#cc4545 86%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cc0000 26%,#cc4545 86%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc4545',GradientType=0 ); /* IE6-9 */
+}
+
+.form-group {
+    text-align: center;
+    margin: auto 5%;
+}
+
+.align {
+    text-align: center;
+}
+
+.col-md-12 {
+    padding: 1%;
+}
+
+.col-md-12 input {
+    margin: 3.5%;
+}
+
+@media only screen and (max-width: 990px) {
+  
+    .register-right{
+    margin: auto;
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    width: 90%;
+    margin-bottom: 2%;
+    }
+}

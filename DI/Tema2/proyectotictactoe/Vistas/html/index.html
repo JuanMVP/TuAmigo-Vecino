@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <nav class="nav-content">
+        <div class="nav-wrapper">
+            <img src="../img/tictactoe.png" id="logo" alt=""> <a href="index.html" class="brand-logo"> &nbsp;TicTacToe</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" id="btn-logout" >Cerrar Sesión</a></li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Juego</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div id="chooseP">
+        <h3>Elige un lado</h3><br /><br>
+        <button id="chooseP1" class="btn btn-primary" ><i class="fas fa-cross"></i></button>&nbsp; or &nbsp;<button id="chooseP2"
+            class="btn btn-primary"><i class="fas fa-skull"></i></button>
+    </div>
+
+    
+
+    <div id="board">
+            <div id="number">0</div>
+        <table>
+            <tr class="top">
+                <td id="0"></td>
+                <td id="1" class="vert"></td>
+                <td id="2"></td>
+            </tr>
+            <tr class="mid">
+                <td id="3" class="hori"></td>
+                <td id="4" class="vert hori"></td>
+                <td id="5" class="hori"></td>
+            </tr>
+            <tr class="bot">
+                <td id="6"></td>
+                <td id="7" class="vert"></td>
+                <td id="8"></td>
+            </tr>
+        </table>
+    </div><br>
+
+    <div class='row'>
+        <div class='col-md-4 col-md-offset-4' id="scores"><i class="fas fa-cross"></i>: 0 &nbsp; <i class="fas fa-skull"></i>:
+            0</div>
+    </div>
+    
+
+    <script src="../javascript/timer.js"></script>
+    <script src="../javascript/ticTacToe.js"></script>
+
+</body>
+
+</html>

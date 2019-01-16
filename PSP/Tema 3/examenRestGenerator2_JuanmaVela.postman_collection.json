@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "a172b183-5cf2-43fe-9f07-2b7df117279d",
+		"name": "examenRestGenerator2_JuanmaVela",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear nuevo usuario admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "{{MASTER_KEY}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear nuevo usuario station",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "{{MASTER_KEY}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "estacion01@damweather.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "station01",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "station",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear nuevo usuario user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "{{MASTER_KEY}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@user.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass1234",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertar nueva estación",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjODU4YmZmMGI1NDQxNTFjNmUxNiIsImlhdCI6MTU0NDAxNDM4NX0.-vdUbZY8W71d0SXsg1A2ErVmQZoY91ExL8DYXiPO128",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Colegio",
+							"type": "text"
+						},
+						{
+							"key": "latitud",
+							"value": "37.3763339",
+							"type": "text"
+						},
+						{
+							"key": "longitud",
+							"value": "-6.0161164,15",
+							"type": "text"
+						},
+						{
+							"key": "caracteristicas",
+							"value": "Todo tipo de sensores",
+							"type": "text"
+						},
+						{
+							"key": "ubicacion",
+							"value": "Sevilla, ES",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/estacions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"estacions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin@admin.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "{{MASTER_KEY}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertar datos meteorológicos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjOGQyYmZmMGI1NDQxNTFjNmUxNyIsImlhdCI6MTU0NDAxNTI0NX0.74yemwtqkRP0gS5WlhyvF5xFCYBVF6QlIKLt6Zvornc",
+							"type": "text"
+						},
+						{
+							"key": "fecha_hora",
+							"value": "04/12/18 10:25",
+							"type": "text"
+						},
+						{
+							"key": "lluvia",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "viento",
+							"value": "10 SO",
+							"type": "text"
+						},
+						{
+							"key": "humedad",
+							"value": "44,00%",
+							"type": "text"
+						},
+						{
+							"key": "temperatura",
+							"value": "13.42",
+							"type": "text"
+						},
+						{
+							"key": "num_estacion",
+							"value": "01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/dato-metereologicos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dato-metereologicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "realiza una consulta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjOTVhYmZmMGI1NDQxNTFjNmUxOCIsImlhdCI6MTU0NDAxNTc1NX0.ZGgp7ro8jdxbA3bSjDghV2rP5KCf0euIMF1IdPvkvCE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/dato-metereologicos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dato-metereologicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar datos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjODU4YmZmMGI1NDQxNTFjNmUxNiIsImlhdCI6MTU0NDAxNTgyNn0.mY4YkmlwgSI-ohJJYjiARxFNYDcrzwF2WvmGvQFhUuY",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/dato-metereologicos/5c07cdabbff0b544151c6e1a",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dato-metereologicos",
+						"5c07cdabbff0b544151c6e1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "petición con query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjOGQyYmZmMGI1NDQxNTFjNmUxNyIsImlhdCI6MTU0NDAxNjAzNn0.-PpJczxM05ciyP_bYLswALEXtH92_Z74SE_p7xkfxJQ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/dato-metereologicos?fields=fecha_hora,temperatura&sort=fecha_hora",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dato-metereologicos"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "fecha_hora,temperatura"
+						},
+						{
+							"key": "sort",
+							"value": "fecha_hora"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificacion",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "access_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjMDdjODU4YmZmMGI1NDQxNTFjNmUxNiIsImlhdCI6MTU0NDAxNjI1Nn0._BzHfxlh5pyB1fyAmLusm4XXyfIRIbQDOyElH42oG9w",
+							"type": "text"
+						},
+						{
+							"key": "fecha_hora",
+							"value": "04/12/18 10:25",
+							"type": "text"
+						},
+						{
+							"key": "lluvia",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "viento",
+							"value": "10 SO",
+							"type": "text"
+						},
+						{
+							"key": "humedad",
+							"value": "44,00%",
+							"type": "text"
+						},
+						{
+							"key": "temperatura",
+							"value": "13.44",
+							"type": "text"
+						},
+						{
+							"key": "num_estacion",
+							"value": "01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/dato-metereologicos/5c07ce0ebff0b544151c6e1f?",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dato-metereologicos",
+						"5c07ce0ebff0b544151c6e1f"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

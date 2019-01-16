@@ -1,0 +1,30 @@
+#contenido{
+    text-align: center;
+    margin-top: 10%;
+}
+.toolbar{
+    width: 100%;
+}
+
+.email-valido {
+    font-weight: bold;
+    color:blue;
+  }
+
+.email-novalido {
+    text-decoration: line-through;
+    color: orangered;
+  }
+
+
+.password-valido {
+    font-weight: bold;
+    color:blue;
+  }
+
+.password-novalido {
+    text-decoration: line-through;
+    color: orangered;
+  } 
+
+

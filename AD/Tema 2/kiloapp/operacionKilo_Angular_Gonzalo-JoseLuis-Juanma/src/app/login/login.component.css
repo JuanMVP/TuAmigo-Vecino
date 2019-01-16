@@ -1,0 +1,59 @@
+h1{
+    font-family: arial;
+    color: #f7f9f9;
+    text-align: center;
+    font-size: 32pt;
+    margin-top: 0;
+}
+
+#login-container {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.example-form {
+
+    margin: 0 auto;
+    min-width: 150px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+
+#contenido{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/img/fondoLogin.svg");
+}
+
+.email-valido {
+    font-weight: bold;
+    color: #d2cca1;
+}
+
+.email-novalido {
+    text-decoration: line-through;
+    color: red;
+}
+
+
+.password-valido {
+    font-weight: bold;
+    color: #d2cca1;
+}
+
+.password-novalido {
+    text-decoration: line-through;
+    color: red;
+}
+
+
+

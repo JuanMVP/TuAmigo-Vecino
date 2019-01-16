@@ -1,0 +1,30 @@
+<div id="contenido">
+  <div id="register-container">
+    <h1>Rellene el formulario</h1>
+    <form class="example-form">
+
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Nombre de Usuario</mat-label>
+        <input matInput placeholder="Nombre y apellidos" required [(ngModel)]="username" name="email">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Email</mat-label>
+        <input matInput placeholder="Email" required [(ngModel)]="email" name="email">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Grupo</mat-label>
+        <input matInput placeholder="Grupo" required [(ngModel)]="grupo" name="grupo">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label [ngStyle]="{'color':'#f7f9f9'}">Contraseña</mat-label>
+        <input matInput placeholder="Combinación de números y letras" [(ngModel)]="password" name="password" required
+          type="password">
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" (click)="doRegister()" [ngStyle]="{'background-color':'#d2cca1', 'color':'#12130f', 'width':'100%'}">Registrarse</button>
+    </form>
+  </div>
+</div>

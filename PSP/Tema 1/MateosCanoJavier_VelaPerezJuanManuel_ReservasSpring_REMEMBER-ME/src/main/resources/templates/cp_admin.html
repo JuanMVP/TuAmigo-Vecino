@@ -1,0 +1,189 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+     <title>Panel de Control</title>
+     <meta charset="utf-8">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+     <link rel="stylesheet" type="text/css" href="css/cp_admin.css">
+  
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+   </head>
+   <body>  
+    <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+         <a class="izquierda" href="cp_admin.html" th:href="@{/cp_admin}"><img src="img/salesianos.png"></a>
+       </div>
+       <div class="centro">
+         <ul class="nav navbar-nav">
+          <li><h2>Aplicacion de Reservas de Aulas</h2></li>
+        </ul>
+      </div>
+      <ul class="nav navbar-nav navbar-right style">
+         <li><form th:action="@{/logout}" method="post">
+		
+		<span class="glyphicon glyphicon-log-in style"></span><input value="Logout" type="submit"></li>
+	</form>
+      </ul>
+    </div>
+  </nav>
+  </header>
+  <div class="container-fluid">
+  
+  
+      <div class="col-12" sec:authorize="hasRole('ROLE_ADMIN')">
+        <section class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              
+              <i class="fas fa-bookmark"></i>
+              <p>Reservar Aula</p>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="calendario.html" th:href="@{/calendario}">
+              <i class="far fa-calendar-alt"></i>
+              <p>Visualizar Calendario</p>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="listaEliminarReserva.html" th:href="@{/listaEliminarReserva}" >
+              <i class="far fa-calendar-times"></i>
+              <p>Eliminar Reserva</p>
+              </a>
+            </div>
+            
+
+            <div class="col-md-2">
+              <a href="formularioCrearSala.html" th:href="@{/formularioCrearSala}">
+              <i class="fas fa-door-open"></i>
+              <p>Agregar Sala</p>
+              </a>
+            </div>
+              
+               <div class="col-md-2">
+                 <a href="listaRegistrados.html" th:href="@{/listaRegistrados}" >
+                <i class="fas fa-user-plus"></i>
+                <p>Agregar Usuarios</p></a>  
+              
+              </div>
+        
+          </div>
+        </section>
+      </div>
+
+
+    <div class="col-12" sec:authorize="hasRole('ROLE_USER')">
+      <section class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <a href="reservaForm.html" th:href="@{/reservarAula}">
+            <i class="fas fa-bookmark"></i>
+            <p>Reservar Aula</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="">
+            <i class="far fa-calendar-alt"></i>
+            <p>Visualizar Calendario</p>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="g_dis.html">
+            <i class="far fa-calendar-times"></i>
+            <p>Eliminar Reserva</p>
+            </a>
+          </div>
+      
+        </div>
+      </section>
+        
+          </div>
+      </div>
+      <!-- Footer -->
+        <div class="footer col-12">
+          <!--Footer-->
+          <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+            
+            <!--Footer Links-->
+            <div class="container text-center text-md-left">
+              
+              <!-- Footer links -->
+              <div class="row text-center text-md-left mt-3 pb-3">
+              
+                <hr class="w-100 clearfix d-md-none">
+                 <!--Fourth column-->
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contacto Nº1</h6>
+                  <p><i class="fa fa-home mr-2"></i>41015 Sevilla</p>
+                  <p><i class="fa fa-envelope mr-8"></i> jm.vela94@gmail.com</p>
+                  <p><i class="fa fa-phone mr-2"></i> +34 652 76 78 01</p>
+                </div>
+  
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contacto Nº2</h6>
+                  <p><i class="fa fa-home mr-2"></i>41300 Sevilla</p>
+                  <p><i class="fa fa-envelope mr-8"></i> javiermateos4@gmail.com</p>
+                  <p><i class="fa fa-phone mr-2"></i> +34 636 32 06 69</p>
+                </div>
+  
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Donde encontrarnos</h6>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.399563345801!2d-6.00963138462!3d37.380381979833096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c6a6fd0990f%3A0x448eb556f306897f!2sSalesianos+Triana!5e0!3m2!1sen!2ses!4v1525850786070" width="300" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                
+              </div>
+              <!-- Footer links -->
+              
+              <hr>
+              
+              <div class="row py-3 d-flex align-items-center">
+                
+                <!--Grid column-->
+                <div class="col-md-8 col-lg-8">
+                  
+                  <!--Copyright-->
+                  <p class="text-center text-md-left grey-text">© 2018 Copyright: <a href="#"><strong>Javier Mateos Cano y Juan Manuel Vela Perez</strong></a></p>
+                  <!--/.Copyright-->
+                  
+                </div>
+                <!--Grid column-->
+                
+                <!--Grid column-->
+                <div class="col-md-4 col-lg-4 ml-lg-0">
+                  
+                  <!--Social buttons-->
+                  <div class="text-center text-md-right">
+                    <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item"><a href="https://www.facebook.com/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-facebook"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.twitter.com/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="https://plus.google.com/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-google-plus"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/" class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                  <!--/.Social buttons-->
+                  
+                </div>
+                <!--Grid column-->
+                
+              </div>
+              
+            </div>
+            
+          </footer>
+          <!--/.Footer-->
+  </div>
+  </body>
+  </html>
