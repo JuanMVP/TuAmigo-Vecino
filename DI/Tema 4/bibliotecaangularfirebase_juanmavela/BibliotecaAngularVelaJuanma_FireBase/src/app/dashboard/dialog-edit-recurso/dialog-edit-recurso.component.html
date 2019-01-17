@@ -1,0 +1,44 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h2>Editar Recurso </h2>
+</div>
+<div fxLayout="column"  fxLayoutAlign="center center">
+    <form [formGroup]="newRecursoForm" >
+    <mat-form-field class="example-full-width">
+    <input matInput placeholder="Titulo Recurso" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+   <input matInput placeholder="Autor Recurso" formControlName="autor">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Anyo Recurso"  type="number"  formControlName="anyo">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Contenido Recurso" formControlName="content">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Categoria" [(value)]="categoriaSeleccionada" name="categoriaSeleccionada">
+        <mat-optgroup *ngFor="let supercategoria of arraySuperCategoria" [label]="supercategoria.name" [disabled]="supercategoria.disabled">
+          <mat-option *ngFor="let categoria of supercategoria.categories" [value]="categoria.id">
+            {{categoria.name}}
+          </mat-option>
+        </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+
+
+<mat-form-field class="example-full-width">
+  <mat-select placeholder="Tipos">
+    <mat-option *ngFor="let tipo of arrayTipo" [value]="tipo.id">
+      {{tipo.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  
+    
+  <button mat-raised-button color="primary" (click)="updateRecurso()">Crear</button>
+  </form>
+</div>

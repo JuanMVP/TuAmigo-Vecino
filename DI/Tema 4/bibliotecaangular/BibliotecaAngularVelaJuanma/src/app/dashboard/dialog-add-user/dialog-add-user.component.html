@@ -1,0 +1,45 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h2>Añadir Usuario </h2>
+  </div>
+  <div fxLayout="column"  fxLayoutAlign="center center">
+  <form [formGroup]="crearUsuarioForm" >
+      <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+    
+  
+    
+    <mat-form-field class="example-full-width">
+     <input matInput placeholder="Email" formControlName="email">
+     </mat-form-field>
+   
+  
+    
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Contraseña"  [type]="hide ? 'password' : 'text'" formControlName="password">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Confirmar Contraseña" [type]="hide ? 'password' : 'text'" formControlName="repeatPassword">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+
+        <button (click)="generar()">Generar contraseña</button>
+    
+  
+    
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Telefono" formControlName="phone">
+      </mat-form-field>
+    
+  
+    
+    <mat-form-field class="example-full-width">
+     <input matInput placeholder="Notas"    formControlName="notes">
+     </mat-form-field>
+    
+  <button mat-raised-button color="primary" (click)="addUser()"  >Crear</button>
+</form>
+</div>
+  

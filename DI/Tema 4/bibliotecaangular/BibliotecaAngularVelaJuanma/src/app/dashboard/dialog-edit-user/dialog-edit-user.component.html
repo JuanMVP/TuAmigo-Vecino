@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h2>Editar Usuario </h2>
+  </div>
+  <div fxLayout="column"  fxLayoutAlign="center center">
+      <mat-form-field class="example-full-width">
+      <input matInput placeholder="Nombre " [(ngModel)]="usuario.name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+     <input matInput placeholder="Email" [(ngModel)]="usuario.email">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Contraseña"    [(ngModel)]="usuario.password">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Telefono" [(ngModel)]="usuario.phone">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+     <input matInput placeholder="Notas"    [(ngModel)]="usuario.notes">
+    </mat-form-field>
+  
+    
+    
+      
+    <button mat-raised-button color="primary" (click)="saveUserUpdated()">Guardar</button>
+  </div>
