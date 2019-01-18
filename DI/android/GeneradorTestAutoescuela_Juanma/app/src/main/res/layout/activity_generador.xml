@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".GeneradorActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,18 +18,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_mrdrive_logo" />
 
+    <Spinner
+        android:id="@+id/spinnerPreguntas"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <Button
-        android:id="@+id/buttonGenerarTest"
-        android:layout_width="217dp"
-        android:layout_height="50dp"
+        android:id="@+id/buttonGenerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_light"
         android:text="Generar Test"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPreguntas" />
+
 </android.support.constraint.ConstraintLayout>
