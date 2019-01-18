@@ -30,7 +30,7 @@ public class GeneradorActivity extends AppCompatActivity {
                 
                 int posicionSeleccionada = spinnerNumeroPreguntas.getSelectedItemPosition();
                 if(posicionSeleccionada == 0){
-                    Toast.makeText(GeneradorActivity.this, getString(R.id.errorNumPreguntas), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GeneradorActivity.this, "Seleccione un número de preguntas", Toast.LENGTH_SHORT).show();
                 }else{
                     navegarPreguntasActivity(posicionSeleccionada);
                 }

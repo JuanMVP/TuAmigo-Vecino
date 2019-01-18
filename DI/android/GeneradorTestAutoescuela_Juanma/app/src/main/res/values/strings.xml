@@ -1,12 +1,9 @@
 <resources>
     <string name="app_name">GeneradorTestAutoescuela_Juanma</string>
     <string-array name="numero_preguntas">
-        <item>--Seleccione Número de preguntas</item>
+        <item>- Seleccione número de preguntas -</item>
         <item>5</item>
         <item>10</item>
-
-
     </string-array>
-    <string name="errorNumPreguntas">Seleccione otro numero de preguntas</string>
-
+    <string name="errorPreguntas">Seleccione un nº de preguntas</string>
 </resources>
