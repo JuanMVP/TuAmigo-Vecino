@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listView);
 
-        MyAdapter adapter = new MyAdapter(this, Arrays.asList(new Repo(155525054,"2DAM","JuanMVP/2DAM",new Owner("https://avatars0.githubusercontent.com/u/38249988?v=4"))));
-
+        MyAdapter adapter = new MyAdapter(this, Arrays.asList(new Repo(155525054,"2DAM","JuanMVP/2DAM",new Owner("https://avatars0.githubusercontent.com/u/38249988?v=4")),
+                new Repo(155525054,"2DAM","JuanMVP/2DAM",new Owner("https://avatars0.githubusercontent.com/u/38249988?v=4"))   ));
         listView.setAdapter(adapter);
 
     }
