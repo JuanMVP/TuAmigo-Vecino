@@ -5,10 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.juanmavela.listacolegios_juanma.colegioFragment.OnListFragmentInteractionListener;
-import com.example.juanmavela.listacolegios_juanma.dummy.DummyContent.DummyItem;
 import com.example.juanmavela.listacolegios_juanma.model.Colegio;
 import com.example.juanmavela.listacolegios_juanma.model.ColegioInteracionListener;
 
@@ -36,15 +36,16 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.nombre.setText(holder.mItem.getNombre());
-        holder.direccion.setText(holder.mItem.getLatitud());
+        holder.direccion.setText(holder.mItem.getDireccion());
         holder.etapas.setText(holder.mItem.getEtapasEducativas());
 
-        holder.direccion.setOnClickListener(new View.OnClickListener() {
+
+
+        holder.btnMapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
+
                     mListener.onColegioMapClick(holder.mItem.getLatitud(),holder.mItem.getLongitud());
                 }
             }
@@ -60,20 +61,28 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
         public final View mView;
         public final TextView nombre;
         public final TextView direccion;
+        public final TextView latitud;
+        public final TextView longitud;
         public final TextView etapas;
         public Colegio mItem;
+        public ImageView imagenColegio;
+        public ImageButton btnMapa;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
             nombre =  view.findViewById(R.id.nombreColegio);
-            direccion =  view.findViewById(R.id.textDireccion);
+            direccion = view.findViewById(R.id.textDireccion);
+            latitud =  view.findViewById(R.id.textDireccion);
+            longitud = view.findViewById(R.id.textLongitud);
             etapas = view.findViewById(R.id.textEtapas);
+            imagenColegio = view.findViewById(R.id.imagenColegio);
+            btnMapa = view.findViewById(R.id.buttonMapa);
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + direccion.getText() + "'";
+            return super.toString() + " '" + latitud.getText() + "'";
         }
     }
 }

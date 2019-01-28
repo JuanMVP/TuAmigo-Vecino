@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.juanmavela.listacolegios_juanma.dummy.DummyContent;
 import com.example.juanmavela.listacolegios_juanma.dummy.DummyContent.DummyItem;
@@ -34,6 +35,7 @@ public class colegioFragment extends Fragment {
     MycolegioRecyclerViewAdapter adapter;
     Context context;
     List<Colegio> listaColegios;
+
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -77,7 +79,11 @@ public class colegioFragment extends Fragment {
             }
 
             listaColegios = new ArrayList<>();
-            listaColegios.add(new Colegio("Salesianos San Pedro","37.380368","6.007181","Infantil,Primaria,Secundaria,Bachillerato y FP","http://www.artesacro.org/imagenes/La%20carcel.JPG"));
+            listaColegios.add(new Colegio("Salesianos San Pedro","Condes de Bustillo,17 Sevilla","37.380368","-6.007181","Infantil,Primaria,Secundaria,Bachillerato y FP","http://www.artesacro.org/imagenes/La%20carcel.JPG"));
+            listaColegios.add(new Colegio("Salesianos San Pedro","Condes de Bustillo,17 Sevilla","37.380368","-6.007181","Infantil,Primaria,Secundaria,Bachillerato y FP","http://www.artesacro.org/imagenes/La%20carcel.JPG"));
+
+            adapter = new MycolegioRecyclerViewAdapter(context,R.layout.fragment_colegio,listaColegios,mListener);
+            recyclerView.setAdapter(adapter);
 
         }
         return view;
@@ -87,7 +93,7 @@ public class colegioFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
+        if (context instanceof ColegioInteracionListener) {
             mListener = (ColegioInteracionListener) context;
         } else {
             throw new RuntimeException(context.toString()
