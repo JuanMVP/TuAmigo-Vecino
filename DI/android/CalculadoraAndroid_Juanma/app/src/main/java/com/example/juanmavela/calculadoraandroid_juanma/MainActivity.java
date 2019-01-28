@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 public class MainActivity  extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,btnBorrarUno;
+    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,btnBorrarUno, btnSuma,btnResta,btnIgual;
 
     ImageButton btnBorrarTodo;
     TextView pantallaCalculadora;
     double result;
     String textoCalculadora;
+    Calculadora calculadora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,11 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
         btn9 = findViewById(R.id.button9);
         btnBorrarTodo = findViewById(R.id.buttonEliminarNumero);
         btnBorrarUno = findViewById(R.id.buttonBorrarUno);
+        btnSuma = findViewById(R.id.buttonSuma);
+        btnResta = findViewById(R.id.buttonResta);
+        btnIgual = findViewById(R.id.buttonIgual);
         pantallaCalculadora = findViewById(R.id.editNumbers);
+        calculadora = new Calculadora();
 
         btn0.setOnClickListener(this);
         btn1.setOnClickListener(this);
@@ -59,6 +64,13 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
                 textoCalculadora = pantallaCalculadora.getText().toString();
                 textoCalculadora = textoCalculadora.substring(0,textoCalculadora.length()-1);
                 pantallaCalculadora.setText(textoCalculadora);
+            }
+        });
+
+        btnSuma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantallaCalculadora.setText(calculadora.suma(op1));
             }
         });
 
