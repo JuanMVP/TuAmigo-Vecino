@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements ColegioInteracion
     public void onColegioMapClick(String latitud, String longitud) {
 
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("geo:37.380368,-6.007181"));
+            intent.setData(Uri.parse("geo:"+latitud+","+longitud));
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }

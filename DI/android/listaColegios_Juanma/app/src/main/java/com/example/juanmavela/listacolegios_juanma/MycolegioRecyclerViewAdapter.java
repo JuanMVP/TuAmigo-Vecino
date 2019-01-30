@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.juanmavela.listacolegios_juanma.model.Colegio;
 import com.example.juanmavela.listacolegios_juanma.model.ColegioInteracionListener;
 
@@ -19,10 +20,12 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
 
     private final List<Colegio> mValues;
     private final ColegioInteracionListener mListener;
+    Context ctx;
 
     public MycolegioRecyclerViewAdapter(Context context, int layout, List<Colegio> listaColegios, ColegioInteracionListener listener) {
         mValues = listaColegios;
         mListener = listener;
+        this.ctx = context;
     }
 
     @Override
@@ -38,16 +41,16 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
         holder.nombre.setText(holder.mItem.getNombre());
         holder.direccion.setText(holder.mItem.getDireccion());
         holder.etapas.setText(holder.mItem.getEtapasEducativas());
-
+        Glide.with(ctx).load(holder.mItem.getImagen_url()).into(holder.imagenColegio);
 
 
         holder.btnMapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (null != mListener) {
 
-                    mListener.onColegioMapClick(holder.mItem.getLatitud(),holder.mItem.getLongitud());
-                }
+
+                    mListener.onColegioMapClick(holder.mItem.getLatitud(), holder.mItem.getLongitud());
+
             }
         });
     }
@@ -61,8 +64,7 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
         public final View mView;
         public final TextView nombre;
         public final TextView direccion;
-        public final TextView latitud;
-        public final TextView longitud;
+
         public final TextView etapas;
         public Colegio mItem;
         public ImageView imagenColegio;
@@ -71,10 +73,9 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            nombre =  view.findViewById(R.id.nombreColegio);
+            nombre = view.findViewById(R.id.nombreColegio);
             direccion = view.findViewById(R.id.textDireccion);
-            latitud =  view.findViewById(R.id.textDireccion);
-            longitud = view.findViewById(R.id.textLongitud);
+
             etapas = view.findViewById(R.id.textEtapas);
             imagenColegio = view.findViewById(R.id.imagenColegio);
             btnMapa = view.findViewById(R.id.buttonMapa);
@@ -82,7 +83,15 @@ public class MycolegioRecyclerViewAdapter extends RecyclerView.Adapter<Mycolegio
 
         @Override
         public String toString() {
-            return super.toString() + " '" + latitud.getText() + "'";
+            return "ViewHolder{" +
+                    "mView=" + mView +
+                    ", nombre=" + nombre +
+                    ", direccion=" + direccion +
+                    ", etapas=" + etapas +
+                    ", mItem=" + mItem +
+                    ", imagenColegio=" + imagenColegio +
+                    ", btnMapa=" + btnMapa +
+                    '}';
         }
     }
 }
