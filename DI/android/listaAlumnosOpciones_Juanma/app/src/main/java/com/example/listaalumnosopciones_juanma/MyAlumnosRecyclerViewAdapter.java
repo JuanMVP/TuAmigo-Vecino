@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import com.example.listaalumnosopciones_juanma.dummy.DummyContent.DummyItem;
+
 import com.example.listaalumnosopciones_juanma.model.Alumno;
 import com.example.listaalumnosopciones_juanma.model.AlumnoInteracionListener;
 

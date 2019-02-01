@@ -74,6 +74,9 @@ public class AlumnosFragment extends Fragment {
             listaAlumnos.add(new Alumno("Juan Manuel","Vela Pérez","https://api.adorable.io/avatars/285/juan@adorable.io.png"));
             listaAlumnos.add(new Alumno("Javier", "Mateos Cano","https://api.adorable.io/avatars/285/javier@adorable.io.png"));
             listaAlumnos.add(new Alumno("Mario","Martinez Sanz","https://api.adorable.io/avatars/285/mario@adorable.io.png"));
+            listaAlumnos.add(new Alumno("Juan Manuel","Vela Pérez","https://api.adorable.io/avatars/285/juan@adorable.io.png"));
+            listaAlumnos.add(new Alumno("Javier", "Mateos Cano","https://api.adorable.io/avatars/285/javier@adorable.io.png"));
+            listaAlumnos.add(new Alumno("Mario","Martinez Sanz","https://api.adorable.io/avatars/285/mario@adorable.io.png"));
 
             adapter = new MyAlumnosRecyclerViewAdapter(context,R.layout.fragment_alumnos,listaAlumnos,mListener);
 
