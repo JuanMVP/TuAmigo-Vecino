@@ -7,25 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.mynotesapp_juanma.NotasListFragment.OnListFragmentInteractionListener;
-import com.example.mynotesapp_juanma.dummy.DummyContent.DummyItem;
 import com.example.mynotesapp_juanma.model.ListaNotasInteracionListener;
 import com.example.mynotesapp_juanma.model.Nota;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class MyNotasListRecyclerViewAdapter extends RecyclerView.Adapter<MyNotasListRecyclerViewAdapter.ViewHolder> {
 
     private final List<Nota> mValues;
     private final ListaNotasInteracionListener mListener;
     Context ctx;
 
-    public MyNotasListRecyclerViewAdapter(Context context, int layout,List<Nota> items, ListaNotasInteracionListener listener) {
+    public MyNotasListRecyclerViewAdapter(Context context, int layout, List<Nota> items, ListaNotasInteracionListener listener) {
         mValues = items;
         mListener = listener;
         this.ctx = context;
@@ -41,19 +35,10 @@ public class MyNotasListRecyclerViewAdapter extends RecyclerView.Adapter<MyNotas
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.nombreAsignatura.setText(holder.mItem.getNombreAsignatura());
+        holder.nota.setText(holder.mItem.getNota());
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
-            }
-        });
+
     }
 
     @Override
@@ -65,13 +50,14 @@ public class MyNotasListRecyclerViewAdapter extends RecyclerView.Adapter<MyNotas
         public final View mView;
         public final TextView nombreAsignatura;
         public final TextView nota;
+        public Nota mItem;
 
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            nombreAsignatura = (TextView) view.findViewById(R.id.item_number);
-            nota = (TextView) view.findViewById(R.id.content);
+            nombreAsignatura = view.findViewById(R.id.nombreAsignaturaFavorita);
+            nota = view.findViewById(R.id.notaAlumnoFavorita);
         }
 
         @Override
@@ -83,3 +69,4 @@ public class MyNotasListRecyclerViewAdapter extends RecyclerView.Adapter<MyNotas
                     '}';
         }
     }
+}

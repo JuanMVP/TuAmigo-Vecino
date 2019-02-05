@@ -2,11 +2,11 @@ package com.example.mynotesapp_juanma.model;
 
 public class Nota {
     private String nombreAsignatura;
-    private double nota;
+    private String nota;
 
     public Nota (){}
 
-    public Nota(String nombreAsignatura, double nota) {
+    public Nota(String nombreAsignatura, String nota) {
         this.nombreAsignatura = nombreAsignatura;
         this.nota = nota;
     }
@@ -20,11 +20,11 @@ public class Nota {
         this.nombreAsignatura = nombreAsignatura;
     }
 
-    public double getNota() {
+    public String getNota() {
         return nota;
     }
 
-    public void setNota(double nota) {
+    public void setNota(String nota) {
         this.nota = nota;
     }
 
