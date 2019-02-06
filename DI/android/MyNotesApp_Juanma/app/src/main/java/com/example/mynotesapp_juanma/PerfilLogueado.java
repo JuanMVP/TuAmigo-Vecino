@@ -41,7 +41,7 @@ public class PerfilLogueado extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment PerfilLogueado.
      */
-    // TODO: Rename and change types and number of parameters
+    // TODO: Rename and change types and number of parametersOnListFragmentInteractionListener
     public static PerfilLogueado newInstance(String param1, String param2) {
         PerfilLogueado fragment = new PerfilLogueado();
         Bundle args = new Bundle();

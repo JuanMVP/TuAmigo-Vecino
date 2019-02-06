@@ -77,6 +77,8 @@ public class NotasListFragment extends Fragment {
 
             adapter = new MyNotasListRecyclerViewAdapter(context,R.layout.fragment_notaslist,listaNotas,mListener);
 
+            recyclerView.setAdapter(adapter);
+
 
         }
 
@@ -91,8 +93,9 @@ public class NotasListFragment extends Fragment {
 
     @Override
     public void onAttach(Context context) {
+        this.ctx = context;
         super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
+        if (context instanceof ListaNotasInteracionListener) {
             mListener = (ListaNotasInteracionListener) context;
         } else {
             throw new RuntimeException(context.toString()

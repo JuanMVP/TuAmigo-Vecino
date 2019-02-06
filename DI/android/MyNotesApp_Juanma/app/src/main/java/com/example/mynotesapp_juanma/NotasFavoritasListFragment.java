@@ -69,6 +69,9 @@ public class NotasFavoritasListFragment extends Fragment {
             listaFavoritas = new ArrayList<>();
             listaFavoritas.add(new Nota("DI","10"));
             listaFavoritas.add(new Nota("AD","9"));
+
+            adapter = new MyNotasFavoritasListRecyclerViewAdapter(context,R.layout.fragment_notaslist,listaFavoritas,mListener);
+            recyclerView.setAdapter(adapter);
         }
         return view;
     }
@@ -76,6 +79,7 @@ public class NotasFavoritasListFragment extends Fragment {
 
     @Override
     public void onAttach(Context context) {
+        this.ctx = context;
         super.onAttach(context);
         if (context instanceof OnListFragmentInteractionListener) {
             mListener = (OnListFragmentInteractionListener) context;

@@ -1,5 +1,6 @@
 package com.example.mynotesapp_juanma;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,7 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.mynotesapp_juanma.dummy.DummyContent;
+import com.example.mynotesapp_juanma.model.ListaNotasInteracionListener;
+
+public class MainActivity extends AppCompatActivity implements NotasListFragment.OnListFragmentInteractionListener, NotasFavoritasListFragment.OnListFragmentInteractionListener, ListaNotasInteracionListener, PerfilLogueado.OnFragmentInteractionListener {
 
     private TextView mTextMessage;
 
@@ -32,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new PerfilLogueado();
                     break;
             }
+
+
+            if(fragment != null){
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.seccion,fragment)
+                        .commit();
+                return true;
+            }
+
             return false;
         }
     };
@@ -44,6 +58,22 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.seccion, new NotasListFragment())
+                .commit();
+
+
     }
 
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
